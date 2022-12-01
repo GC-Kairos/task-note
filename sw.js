@@ -8,7 +8,11 @@ self.addEventListener('install', evento => {
             '/',
             'index.html',
             'css/estilos.css',
-            'app.js'
+            'app.js',
+            'icons/icon-96x96.png',
+            'https://fonts.googleapis.com/icon?family=Material+Icons',
+            'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'
+            
           
             
         ])
@@ -30,28 +34,28 @@ self.addEventListener('fetch', evento => {
 })
 
 
-self.addEventListener('install', evento => {
-    const respCache = caches.open(CACHE_ESTABLE).then( cache2 => {
-        return cache2.addAll([
-            '/',
-            'icons/icon-96x96.png',
-            'https://fonts.googleapis.com/icon?family=Material+Icons',
-            'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'
+// self.addEventListener('install', evento => {
+//     const respCache = caches.open(CACHE_ESTABLE).then( cache2 => {
+//         return cache2.addAll([
+//             '/',
+//             'icons/icon-96x96.png',
+//             'https://fonts.googleapis.com/icon?family=Material+Icons',
+//             'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js'
             
-        ])
-    })
+//         ])
+//     })
 
-    evento.waitUntil(respCache);   
-})
+//     evento.waitUntil(respCache);   
+// })
 
-self.addEventListener('fetch', evento => {
-    const respuesta = fetch(  evento.request ).then( respNet => {
-        return caches.open(CACHE_ESTABLE).then( cache2 => {
-            cache2.put( evento.request, respNet.clone() );
-            return respNet;
-        })
-    }).catch( error => {  
-        return caches.match(evento.request);
-    })
-    evento.respondWith(respuesta);
-})
+// self.addEventListener('fetch', evento => {
+//     const respuesta = fetch(  evento.request ).then( respNet => {
+//         return caches.open(CACHE_ESTABLE).then( cache2 => {
+//             cache2.put( evento.request, respNet.clone() );
+//             return respNet;
+//         })
+//     }).catch( error => {  
+//         return caches.match(evento.request);
+//     })
+//     evento.respondWith(respuesta);
+// })
