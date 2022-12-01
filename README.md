@@ -12,4 +12,4 @@ Se realizó una aplicación **(PWA)** que permite la agregar notas para ser leid
 
 
 ##  Link a GitPages: ##
-
+ https://gc-kairos.github.io/task-note/
