@@ -33,7 +33,7 @@ self.addEventListener('fetch', evento => {
 self.addEventListener('install', evento => {
     const respCache = caches.open(CACHE_ESTABLE).then( cache => {
         return cache.addAll([
-                     
+            '/',
             'icons/icon-96x96.png',
             'https://fonts.googleapis.com/icon?family=Material+Icons',
             'https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js',
