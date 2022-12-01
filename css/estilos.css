@@ -1,0 +1,20 @@
+* {
+box-sizing: border-box;}
+
+.hora {
+color: #1976d2 }
+
+.del {
+outline:none;
+border-style: hidden;
+background-color: white;
+float: right;}
+
+.delete {
+color: brown;
+}
+
+.alert {
+color: #4BB543;
+text-align: center;
+} 
