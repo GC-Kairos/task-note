@@ -5,10 +5,11 @@ Se realizó una aplicación **(PWA)** que permite la agregar notas para ser leid
 
 ## Task Note Imagenes ##
 
+![note1](https://user-images.githubusercontent.com/113116204/205044068-bb04b194-401e-4739-8203-f135d278d900.jpg)
+![note2](https://user-images.githubusercontent.com/113116204/205044073-d7ecbb09-233b-497b-bf3b-17377efa5c7c.jpg)
+![note3](https://user-images.githubusercontent.com/113116204/205044077-b2be0a79-374f-44eb-b7a6-2dab74ce716e.jpg)
 
-![note1](https://user-images.githubusercontent.com/113116204/205043586-fba800e9-c86a-43e8-9145-bff5ed1e8378.jpg)
-![note2](https://user-images.githubusercontent.com/113116204/205043592-1753758a-8de3-4ed4-834e-2642b9e7bca9.jpg)
-![note3](https://user-images.githubusercontent.com/113116204/205043595-b4b8fbb8-1179-490f-a807-c1833472c25f.jpg)
+
 
 ##  Link a GitPages: ##
 
