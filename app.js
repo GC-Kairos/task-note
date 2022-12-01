@@ -123,27 +123,31 @@ function renderizarNotas(aNotas) {
     btn.append(btnicon);
     btnicon.setAttribute('class', 'material-icons delete');
     btnicon.textContent = 'delete'
-
-
-    const del = document.querySelector('.del');
-
-
-    del.addEventListener('click', (e) => {
-
-      for (x of aNotas) {
-        let resultado = aNotas.findIndex((x) => x == aNotas.notas)
-        aNotas.splice(resultado, 1);
-
-      }
-     
-
-      localStorage.setItem("tasks", JSON.stringify(aNotas));
-
-      window.location.reload()
-    })
-
+ 
 
   }
+
+ const del = document.querySelectorAll('.del')
+
+for (const dels of del) {
+
+  dels.addEventListener('click', (e) => {
+
+  
+    let resultado = aNotas.findIndex((x) => x.notas == aNotas.notas)
+    aNotas.splice(resultado, 1);
+    console.log(resultado);
+  
+  
+  
+  localStorage.setItem("tasks", JSON.stringify(aNotas));
+  
+  window.location.reload()
+  })
+  
+
+}
+
 
 }
 
