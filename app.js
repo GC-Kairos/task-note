@@ -54,17 +54,11 @@ btnSave.addEventListener('click', (e) => {
   let notas = new Nota(nota, hora);
 
   if (!nota == "") {
-
     aNotas.push(notas);
-
     localStorage.setItem("tasks", JSON.stringify(aNotas));
-
-    window.location.reload()
-
+    renderizarNotas(aNotas);
   }
-
-
-})
+});
 
 
 
@@ -129,27 +123,20 @@ function renderizarNotas(aNotas) {
 
  const del = document.querySelectorAll('.del')
 
-for (const dels of del) {
-
+ for (const dels of del) {
   dels.addEventListener('click', (e) => {
-
-  
-    let resultado = aNotas.findIndex((x) => x.notas == aNotas.notas)
-    aNotas.splice(resultado, 1);
+    let resultado = aNotas.findIndex((x) => x.notas === e.target.closest('.notas').querySelector('p:last-of-type').textContent);
     console.log(resultado);
-  
-  
-  
-  localStorage.setItem("tasks", JSON.stringify(aNotas));
-  
-  window.location.reload()
-  })
+
+    aNotas.splice(resultado, 1);
+    localStorage.setItem("tasks", JSON.stringify(aNotas));
+    renderizarNotas(aNotas);
+  });
+}
   
 
 }
 
-
-}
 
 leerNotas();
 
